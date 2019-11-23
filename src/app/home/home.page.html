@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Pokémons
+    </ion-title>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Pesquisar treinador" (ionInput)="PegarItems($event)">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let item of items">
+    <ion-card-content>
+      <ion-card-title>
+       Traindor: {{item.trainner}}
+       <p>
+        Pokémon: {{item.name}}
+       </p>
+       <p>
+          Tipo: {{item.type}}
+         </p>
+         <p>
+            Valor: {{item.value}}
+           </p>
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
